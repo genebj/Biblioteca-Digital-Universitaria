@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biblioteca Digital Universitaria</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+nav{
+    background:#163a70;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#ffd700;
+}
+
+main{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    background:white;
+    margin:20px 0;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.banner{
+    width:100%;
+    border-radius:10px;
+}
+
+h2{
+    color:#1e3c72;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+table,th,td{
+    border:1px solid #ccc;
+}
+
+th{
+    background:#1e3c72;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    margin-bottom:15px;
+}
+
+button{
+    background:#1e3c72;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2a5298;
+}
+
+footer{
+    background:#163a70;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+}
+
+#resultado{
+    margin-top:20px;
+    font-weight:bold;
+    color:#1e3c72;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Biblioteca Digital Universitaria</h1>
+    <p>Acceso rápido a recursos académicos y bibliográficos</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#libros">Libros</a>
+    <a href="#tabla">Inventario</a>
+    <a href="#prestamo">Préstamo</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+
+<main>
+
+<section id="inicio">
+    <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?w=1200"
+         alt="Biblioteca universitaria"
+         class="banner">
+
+    <h2>¿Qué es HTML?</h2>
+
+    <p>
+        HTML es un lenguaje de marcado utilizado para crear y estructurar páginas web.
+        Permite organizar información mediante títulos, párrafos, imágenes, tablas,
+        enlaces y formularios.
+    </p>
+
+    <h2>Aplicación en este proyecto</h2>
+
+    <p>
+        En esta biblioteca digital universitaria, HTML permite organizar libros,
+        autores, categorías académicas y recursos de consulta para estudiantes.
+    </p>
+
+    <h2>Características principales de HTML</h2>
+
+    <ul>
+        <li>Organiza el contenido web.</li>
+        <li>Permite insertar imágenes.</li>
+        <li>Facilita la navegación mediante enlaces.</li>
+        <li>Permite crear formularios y tablas.</li>
+        <li>Es la base del desarrollo web.</li>
+    </ul>
+</section>
+
+<section id="libros">
+
+    <h2>Recursos Académicos Disponibles</h2>
+
+    <p>
+        Nuestra biblioteca ofrece una amplia colección de
+        <strong>libros digitales</strong>,
+        <em>artículos científicos</em>
+        y material de consulta.
+    </p>
+
+    <h3>Libros más consultados</h3>
+
+    <ol>
+        <li>Programación Web</li>
+        <li>Bases de Datos</li>
+        <li>Redes de Computadoras</li>
+        <li>Ingeniería de Software</li>
+        <li>Inteligencia Artificial</li>
+    </ol>
+
+    <h3>Categorías disponibles</h3>
+
+    <ul>
+        <li>Tecnología</li>
+        <li>Ingeniería</li>
+        <li>Matemáticas</li>
+        <li>Administración</li>
+        <li>Educación</li>
+    </ul>
+
+    <p>
+        Visita:
+        <a href="https://www.gutenberg.org" target="_blank">
+            Proyecto Gutenberg
+        </a>
+    </p>
+
+</section>
+
+<section id="tabla">
+
+    <h2>Inventario de Libros</h2>
+
+    <table>
+
+        <tr>
+            <th>Código</th>
+            <th>Libro</th>
+            <th>Autor</th>
+            <th>Disponibles</th>
+        </tr>
+
+        <tr>
+            <td>001</td>
+            <td>Programación Web</td>
+            <td>Juan Pérez</td>
+            <td>15</td>
+        </tr>
+
+        <tr>
+            <td>002</td>
+            <td>Bases de Datos</td>
+            <td>Ana Gómez</td>
+            <td>10</td>
+        </tr>
+
+        <tr>
+            <td>003</td>
+            <td>Redes de Computadoras</td>
+            <td>Carlos Díaz</td>
+            <td>8</td>
+        </tr>
+
+    </table>
+
+</section>
+
+<section>
+
+    <h2>Control de Inventario (Vectores Paralelos)</h2>
+
+    <p>
+        Esta sección utiliza JavaScript para mostrar información almacenada
+        en vectores paralelos.
+    </p>
+
+    <button onclick="mostrarInventario()">
+        Mostrar Inventario
+    </button>
+
+    <div id="resultado"></div>
+
+</section>
+
+<section id="prestamo">
+
+    <h2>Formulario de Préstamo</h2>
+
+    <form>
+
+        <label>Nombre del estudiante:</label>
+        <input type="text" required>
+
+        <label>Correo electrónico:</label>
+        <input type="email" required>
+
+        <label>Libro solicitado:</label>
+        <select>
+            <option>Programación Web</option>
+            <option>Bases de Datos</option>
+            <option>Redes de Computadoras</option>
+        </select>
+
+        <label>Modalidad:</label><br>
+
+        <input type="radio" name="modalidad"> Digital
+        <input type="radio" name="modalidad"> Impreso
+
+        <br><br>
+
+        <label>Servicios adicionales:</label><br>
+
+        <input type="checkbox"> Reserva anticipada
+        <br>
+
+        <input type="checkbox"> Notificación por correo
+
+        <br><br>
+
+        <button type="submit">
+            Solicitar Préstamo
+        </button>
+
+    </form>
+
+</section>
+
+<section id="contacto">
+
+    <h2>Contacto</h2>
+
+    <p>Correo: biblioteca@universidad.edu</p>
+
+    <p>Teléfono: (809) 555-1234</p>
+
+</section>
+
+</main>
+
+<footer>
+    Biblioteca Digital Universitaria © 2026 | ISO310 - Unidad 4
+</footer>
+
+<script>
+
+function mostrarInventario(){
+
+let libros = [
+"Programación Web",
+"Bases de Datos",
+"Redes de Computadoras"
+];
+
+let autores = [
+"Juan Pérez",
+"Ana Gómez",
+"Carlos Díaz"
+];
+
+let disponibles = [
+15,
+10,
+8
+];
+
+let total = 0;
+
+for(let i=0;i<disponibles.length;i++){
+    total += disponibles[i];
+}
+
+document.getElementById("resultado").innerHTML =
+"Total de libros disponibles: " + total;
+
+}
+
+</script>
+
+</body>
+</html>
